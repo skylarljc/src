@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
-
+double n;
+double dt = .2;
 int main ()
 {
-  cout << "Hello World!\n";
-  cout << "I'm a C++ program\n";
-  cout << "I'm adding this text so I can stage and commit\n";
-  cout << "More text more commit\n";
+  for (n=1; n>.005; n=(1-3*dt)*n){
+      cout << n << ", ";
+  }
+cout << "liftoff!\n";
 }
