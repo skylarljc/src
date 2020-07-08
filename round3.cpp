@@ -27,18 +27,18 @@ int main (){
     double nt = stod(nt_str);
 
 
-    dt_file.open ("dt_6-25");
-    dx_file.open ("dx_6-25");
+    dt_file.open ("~/training/data/t.dat");
+    dx_file.open ("~/training/data/x.dat");
 
-    dt_file << t << ", ";
-    dx_file << x << ", ";
+    dt_file << t;
+    dx_file << x;
 
     for (int i = 0; i < nt; ++i) {
         t = t + dt;
-        dt_file << t << ", ";
+        dt_file << ", " << t;
 
         x = (1-3*dt)*x;
-        dx_file << x << ", ";
+        dx_file << ", " << x;
     }
 
     dt_file.close();
